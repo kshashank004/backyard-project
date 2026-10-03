@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY 150-Foot Backyard Pathway Guide (Dog-Proof & No-Dig)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        amber: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Print Stylesheet for Field Use */
+        @media print {
+            header, nav, .no-print, button, #shareModal, #costModal {
+                display: none !important;
+            }
+            body {
+                background: white !important;
+                color: black !important;
+                font-size: 11pt !important;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .shadow-sm, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl {
+                box-shadow: none !important;
+            }
+            .border {
+                border-color: #ccc !important;
+            }
+            svg {
+                max-width: 100% !important;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .step-card:hover .step-icon {
+            transform: scale(1.08) rotate(-3deg);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white pb-12">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo & Badges -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                        <i class="fa-solid fa-route"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h1 class="text-base sm:text-lg font-bold text-slate-900 leading-tight">No-Dig Pathway Blueprint</h1>
+                            <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded text-[10px] font-extrabold bg-brand-100 text-brand-800 border border-brand-200 uppercase tracking-wide">
+                                <i class="fa-solid fa-leaf mr-1"></i> No Excavation
+                            </span>
+                        </div>
+                        <p class="text-xs text-brand-600 font-semibold flex items-center gap-1">
+                            <i class="fa-solid fa-dog"></i> 150ft • Standard Poodle High-Speed Approved
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav Navigation -->
+                <nav class="hidden lg:flex items-center space-x-6 text-xs font-semibold text-slate-600">
+                    <a href="#overview" class="hover:text-brand-600 transition-colors">Overview</a>
+                    <a href="#calculator" class="hover:text-brand-600 transition-colors">Calculator & Costs</a>
+                    <a href="#diagram" class="hover:text-brand-600 transition-colors">Cross-Section</a>
+                    <a href="#dog-safety" class="hover:text-brand-600 transition-colors">Poodle Rules</a>
+                    <a href="#steps" class="hover:text-brand-600 transition-colors">6-Step Blueprint</a>
+                    <a href="#tracker" class="hover:text-brand-600 transition-colors">Checklist</a>
+                </nav>
+
+                <!-- Action Buttons -->
+                <div class="flex items-center gap-2 no-print">
+                    <button onclick="window.print()" title="Print Field Blueprint" class="p-2 sm:px-3 sm:py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-print"></i>
+                        <span class="hidden sm:inline">Print / PDF</span>
+                    </button>
+                    <button onclick="openShareModal()" title="Share Link with Wife" class="px-3 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold transition shadow-sm flex items-center gap-1.5">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span>Share Guide</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="overview" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-5xl mx-auto relative z-10 text-center space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/40 backdrop-blur-sm">
+                <i class="fa-solid fa-paw text-amber-400"></i> Engineered for High-Energy Standard Poodle Runners
+            </div>
+            
+            <h2 class="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+                DIY 150-Foot Pathway Master Guide<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-300">No Excavation • Grid-Locked • Zero Wobble</span>
+            </h2>
+
+            <p class="text-slate-300 max-w-3xl mx-auto text-sm sm:text-base leading-relaxed font-normal">
+                Building a surface-laid pathway requires precise layer physics so bricks don't kick out and pavers don't tilt like see-saws under heavy dog sprints. Follow this complete step-by-step blueprint featuring geocell cellular confinement, flush stepping stones, and pet-safe gravel binder.
+            </p>
+
+            <!-- Key Quick Stats -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto text-center pt-2">
+                <div class="bg-slate-800/80 backdrop-blur p-3.5 rounded-2xl border border-slate-700/80 shadow-md">
+                    <div class="text-2xl sm:text-3xl font-black text-brand-400">150 FT</div>
+                    <div class="text-[11px] font-medium text-slate-400 uppercase tracking-wider mt-0.5">Total Path Length</div>
+                </div>
+                <div class="bg-slate-800/80 backdrop-blur p-3.5 rounded-2xl border border-slate-700/80 shadow-md">
+                    <div class="text-2xl sm:text-3xl font-black text-brand-400">3 FT</div>
+                    <div class="text-[11px] font-medium text-slate-400 uppercase tracking-wider mt-0.5">Standard Width (36")</div>
+                </div>
+                <div class="bg-slate-800/80 backdrop-blur p-3.5 rounded-2xl border border-slate-700/80 shadow-md">
+                    <div class="text-2xl sm:text-3xl font-black text-amber-400">0 IN</div>
+                    <div class="text-[11px] font-medium text-slate-400 uppercase tracking-wider mt-0.5">Dig Depth Needed</div>
+                </div>
+                <div class="bg-slate-800/80 backdrop-blur p-3.5 rounded-2xl border border-slate-700/80 shadow-md">
+                    <div class="text-2xl sm:text-3xl font-black text-brand-400">100%</div>
+                    <div class="text-[11px] font-medium text-slate-400 uppercase tracking-wider mt-0.5">Gravel Lock Matrix</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+        <!-- SECTION 1: Dynamic Material & Cost Estimator -->
+        <section id="calculator" class="scroll-mt-20 space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-4">
+                <div>
+                    <h3 class="text-2xl font-black text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-calculator text-brand-600"></i> Interactive Material & Cost Estimator
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-600">Adjust dimensions below to recalculate exact material requirements and estimated costs in real-time.</p>
+                </div>
+                <button onclick="openCostModal()" class="no-print inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition border border-slate-300">
+                    <i class="fa-solid fa-sliders text-brand-600"></i>
+                    <span>Customize Unit Prices</span>
+                </button>
+            </div>
+
+            <!-- Inputs Card -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                            Pathway Length (Feet)
+                        </label>
+                        <div class="relative">
+                            <input type="number" id="calcLength" value="150" min="10" max="1000" class="w-full pl-3 pr-8 py-2.5 bg-slate-50 border border-slate-300 rounded-xl font-black text-slate-900 text-lg focus:ring-2 focus:ring-brand-500 focus:bg-white focus:outline-none transition">
+                            <span class="absolute right-3 top-3 text-xs font-bold text-slate-400">FT</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                            Total Path Width (Feet)
+                        </label>
+                        <div class="relative">
+                            <input type="number" id="calcWidth" value="3" step="0.5" min="2" max="10" class="w-full pl-3 pr-8 py-2.5 bg-slate-50 border border-slate-300 rounded-xl font-black text-slate-900 text-lg focus:ring-2 focus:ring-brand-500 focus:bg-white focus:outline-none transition">
+                            <span class="absolute right-3 top-3 text-xs font-bold text-slate-400">FT</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                            Paver Center Spacing
+                        </label>
+                        <select id="calcSpacing" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-300 rounded-xl font-bold text-slate-900 text-sm focus:ring-2 focus:ring-brand-500 focus:bg-white focus:outline-none transition">
+                            <option value="24" selected>24 Inches (Standard Walking Stride)</option>
+                            <option value="18">18 Inches (Tighter Step Spacing)</option>
+                            <option value="30">30 Inches (Longer Stride)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Results Table -->
+                <div class="overflow-x-auto border border-slate-200 rounded-xl">
+                    <table class="w-full text-left border-collapse min-w-[600px]">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-700 text-xs font-extrabold uppercase tracking-wider">
+                                <th class="p-3.5">Material & Spec</th>
+                                <th class="p-3.5">Calculated Quantity</th>
+                                <th class="p-3.5">Est. Unit Price</th>
+                                <th class="p-3.5 text-right">Subtotal Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs sm:text-sm divide-y divide-slate-200 font-medium text-slate-800">
+                            <!-- Bricks -->
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3.5 font-bold text-slate-900 flex items-center gap-2">
+                                    <div class="w-7 h-7 rounded-lg bg-red-100 text-red-600 flex items-center justify-center shrink-0 font-bold">
+                                        <i class="fa-solid fa-cubes"></i>
+                                    </div>
+                                    <div>
+                                        <div>Red Clay / Concrete Border Bricks</div>
+                                        <div class="text-[11px] font-normal text-slate-500">Standard 4" W x 8" L x 2.25" H (+5% waste)</div>
+                                    </div>
+                                </td>
+                                <td class="p-3.5 font-bold text-brand-700" id="resBricks">473 Bricks</td>
+                                <td class="p-3.5 text-slate-600" id="rateBricks">$0.85 / brick</td>
+                                <td class="p-3.5 font-bold text-slate-900 text-right" id="costBricks">$402.05</td>
+                            </tr>
+                            <!-- Pavers -->
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3.5 font-bold text-slate-900 flex items-center gap-2">
+                                    <div class="w-7 h-7 rounded-lg bg-slate-200 text-slate-700 flex items-center justify-center shrink-0 font-bold">
+                                        <i class="fa-solid fa-square"></i>
+                                    </div>
+                                    <div>
+                                        <div>Square Center Stepping Pavers</div>
+                                        <div class="text-[11px] font-normal text-slate-500">16" x 16" x 2" Smooth Concrete Pavers</div>
+                                    </div>
+                                </td>
+                                <td class="p-3.5 font-bold text-brand-700" id="resPavers">75 Pavers</td>
+                                <td class="p-3.5 text-slate-600" id="ratePavers">$4.50 / paver</td>
+                                <td class="p-3.5 font-bold text-slate-900 text-right" id="costPavers">$337.50</td>
+                            </tr>
+                            <!-- Pea Gravel -->
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3.5 font-bold text-slate-900 flex items-center gap-2">
+                                    <div class="w-7 h-7 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 font-bold">
+                                        <i class="fa-solid fa-gem"></i>
+                                    </div>
+                                    <div>
+                                        <div>3/8" Smooth Washed River Pea Gravel</div>
+                                        <div class="text-[11px] font-normal text-slate-500">1.5" Depth fill inside grid & paver gaps</div>
+                                    </div>
+                                </td>
+                                <td class="p-3.5 font-bold text-brand-700" id="resGravel">1.6 Cu Yds (~87 bags)</td>
+                                <td class="p-3.5 text-slate-600" id="rateGravel">$4.00 / 0.5cu ft bag</td>
+                                <td class="p-3.5 font-bold text-slate-900 text-right" id="costGravel">$348.00</td>
+                            </tr>
+                            <!-- Geotextile Fabric -->
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3.5 font-bold text-slate-900 flex items-center gap-2">
+                                    <div class="w-7 h-7 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center shrink-0 font-bold">
+                                        <i class="fa-solid fa-rugs"></i>
+                                    </div>
+                                    <div>
+                                        <div>Commercial Non-Woven Geotextile Fabric</div>
+                                        <div class="text-[11px] font-normal text-slate-500">4 oz heavy duty weed barrier (4ft x 150ft roll)</div>
+                                    </div>
+                                </td>
+                                <td class="p-3.5 font-bold text-brand-700" id="resFabric">1 Roll (525 sq ft)</td>
+                                <td class="p-3.5 text-slate-600" id="rateFabric">$65.00 / roll</td>
+                                <td class="p-3.5 font-bold text-slate-900 text-right" id="costFabric">$65.00</td>
+                            </tr>
+                            <!-- Honeycomb Grid -->
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3.5 font-bold text-slate-900 flex items-center gap-2">
+                                    <div class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 font-bold">
+                                        <i class="fa-solid fa-border-all"></i>
+                                    </div>
+                                    <div>
+                                        <div>2-Inch Permeable Geocell Honeycomb Grid</div>
+                                        <div class="text-[11px] font-normal text-slate-500">Locks pebbles against high-speed poodle sprints</div>
+                                    </div>
+                                </td>
+                                <td class="p-3.5 font-bold text-brand-700" id="resGrid">350 Sq Feet (3 panels)</td>
+                                <td class="p-3.5 text-slate-600" id="rateGrid">$1.20 / sq ft</td>
+                                <td class="p-3.5 font-bold text-slate-900 text-right" id="costGrid">$420.00</td>
+                            </tr>
+                            <!-- L-Edging & Spikes -->
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3.5 font-bold text-slate-900 flex items-center gap-2">
+                                    <div class="w-7 h-7 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 font-bold">
+                                        <i class="fa-solid fa-ruler-vertical"></i>
+                                    </div>
+                                    <div>
+                                        <div>Snap-Edge L-Restraints & 10" Steel Spikes</div>
+                                        <div class="text-[11px] font-normal text-slate-500">30 pieces (10ft) + 300 steel spiral spikes</div>
+                                    </div>
+                                </td>
+                                <td class="p-3.5 font-bold text-brand-700" id="resEdging">30 Pieces / 300 Spikes</td>
+                                <td class="p-3.5 text-slate-600" id="rateEdging">$12.00 / piece + $0.65 / spike</td>
+                                <td class="p-3.5 font-bold text-slate-900 text-right" id="costEdging">$555.00</td>
+                            </tr>
+                            <!-- Leveling Sand -->
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3.5 font-bold text-slate-900 flex items-center gap-2">
+                                    <div class="w-7 h-7 rounded-lg bg-yellow-100 text-yellow-700 flex items-center justify-center shrink-0 font-bold">
+                                        <i class="fa-solid fa-bucket"></i>
+                                    </div>
+                                    <div>
+                                        <div>Coarse Paver Leveling Sand</div>
+                                        <div class="text-[11px] font-normal text-slate-500">0.5" leveling pads under pavers (prevents wobble)</div>
+                                    </div>
+                                </td>
+                                <td class="p-3.5 font-bold text-brand-700" id="resSand">11 Bags (50 lbs each)</td>
+                                <td class="p-3.5 text-slate-600" id="rateSand">$5.00 / bag</td>
+                                <td class="p-3.5 font-bold text-slate-900 text-right" id="costSand">$55.00</td>
+                            </tr>
+                            <!-- Gravel Glue -->
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3.5 font-bold text-slate-900 flex items-center gap-2">
+                                    <div class="w-7 h-7 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center shrink-0 font-bold">
+                                        <i class="fa-solid fa-spray-can"></i>
+                                    </div>
+                                    <div>
+                                        <div>Pet-Safe Permeable Gravel Glue / Binder</div>
+                                        <div class="text-[11px] font-normal text-slate-500">Polyurethane spray locks top stones in place</div>
+                                    </div>
+                                </td>
+                                <td class="p-3.5 font-bold text-brand-700" id="resGlue">2 Gallons</td>
+                                <td class="p-3.5 text-slate-600" id="rateGlue">$35.00 / gallon</td>
+                                <td class="p-3.5 font-bold text-slate-900 text-right" id="costGlue">$70.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="bg-slate-900 text-white font-extrabold text-sm sm:text-base">
+                            <tr>
+                                <td colspan="3" class="p-4 rounded-bl-xl text-right uppercase tracking-wider">Estimated Materials Total:</td>
+                                <td class="p-4 rounded-br-xl text-right text-brand-400 text-lg sm:text-xl font-black" id="totalProjectCost">$2,252.55</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Interactive Cross-Section Structural Diagram -->
+        <section id="diagram" class="scroll-mt-20 space-y-4">
+            <div class="border-b border-slate-200 pb-4">
+                <h3 class="text-2xl font-black text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-layer-group text-brand-600"></i> Cross-Section Structural Anatomy
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600">Every layer engineered for a surface-laid no-dig assembly. Hover or tap layers for details.</p>
+            </div>
+
+            <div class="bg-slate-900 rounded-3xl p-6 shadow-xl text-white overflow-hidden border border-slate-800">
+                <div class="w-full overflow-x-auto">
+                    <svg viewBox="0 0 750 310" class="w-full min-w-[700px] h-auto font-sans" aria-label="Pathway Cross Section Diagram">
+                        <!-- Definitions for Markers -->
+                        <defs>
+                            <marker id="arrowhead" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"/>
+                            </marker>
+                        </defs>
+
+                        <!-- Base Subsoil (Scalped Dirt) -->
+                        <rect x="20" y="210" width="710" height="80" fill="#1e293b" stroke="#334155" stroke-dasharray="4,4" rx="4"/>
+                        <text x="375" y="255" fill="#94a3b8" font-size="12" font-weight="700" text-anchor="middle">Scalped Native Soil / Bare Lawn Base (Unexcavated)</text>
+
+                        <!-- Non-woven Geotextile Line -->
+                        <line x1="50" y1="209" x2="700" y2="209" stroke="#38bdf8" stroke-width="5"/>
+
+                        <!-- Left L-Restraint & Spike -->
+                        <path d="M 50 135 L 50 208 L 90 208" fill="none" stroke="#f59e0b" stroke-width="4"/>
+                        <line x1="70" y1="150" x2="70" y2="275" stroke="#e2e8f0" stroke-width="3" stroke-dasharray="2,2"/>
+                        <circle cx="70" cy="148" r="5" fill="#e2e8f0"/>
+
+                        <!-- Right L-Restraint & Spike -->
+                        <path d="M 700 135 L 700 208 L 660 208" fill="none" stroke="#f59e0b" stroke-width="4"/>
+                        <line x1="680" y1="150" x2="680" y2="275" stroke="#e2e8f0" stroke-width="3" stroke-dasharray="2,2"/>
+                        <circle cx="680" cy="148" r="5" fill="#e2e8f0"/>
+
+                        <!-- Left Brick Border -->
+                        <rect x="90" y="145" width="70" height="63" fill="#ef4444" stroke="#b91c1c" stroke-width="2" rx="3"/>
+                        <text x="125" y="182" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">Brick</text>
+
+                        <!-- Right Brick Border -->
+                        <rect x="590" y="145" width="70" height="63" fill="#ef4444" stroke="#b91c1c" stroke-width="2" rx="3"/>
+                        <text x="625" y="182" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">Brick</text>
+
+                        <!-- Honeycomb Geocell Grid -->
+                        <rect x="160" y="165" width="120" height="43" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-dasharray="6,3"/>
+                        <rect x="470" y="165" width="120" height="43" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-dasharray="6,3"/>
+
+                        <!-- Sand Leveling Pad -->
+                        <rect x="280" y="197" width="190" height="11" fill="#eab308" opacity="0.9" rx="1"/>
+
+                        <!-- Center Stepping Paver -->
+                        <rect x="285" y="165" width="180" height="32" fill="#64748b" stroke="#334155" stroke-width="2" rx="2"/>
+                        <text x="375" y="186" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">16" Stepping Paver (Flush)</text>
+
+                        <!-- Pea Gravel Pebbles -->
+                        <g fill="#cbd5e1">
+                            <circle cx="175" cy="180" r="4"/><circle cx="190" cy="190" r="5"/><circle cx="210" cy="175" r="4"/><circle cx="230" cy="195" r="5"/><circle cx="250" cy="180" r="4"/><circle cx="265" cy="192" r="4"/>
+                            <circle cx="485" cy="180" r="4"/><circle cx="500" cy="190" r="5"/><circle cx="520" cy="175" r="4"/><circle cx="540" cy="195" r="5"/><circle cx="560" cy="180" r="4"/><circle cx="575" cy="192" r="4"/>
+                        </g>
+
+                        <!-- Top Glue Matrix Line -->
+                        <path d="M 160 166 L 280 166 M 470 166 L 590 166" stroke="#818cf8" stroke-width="3" stroke-dasharray="2,2"/>
+
+                        <!-- Callouts & Arrow Annotations -->
+                        <path d="M 70 45 L 70 135" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+                        <text x="70" y="32" fill="#38bdf8" font-size="11" font-weight="700" text-anchor="middle">10" Spike (Double Spiked 12")</text>
+
+                        <path d="M 220 45 L 220 155" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+                        <text x="220" y="32" fill="#22c55e" font-size="11" font-weight="700" text-anchor="middle">2" Honeycomb Geocell Grid</text>
+
+                        <path d="M 375 45 L 375 155" stroke="#ffffff" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+                        <text x="375" y="32" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">Paver Top 100% Flush with Stones</text>
+
+                        <path d="M 530 45 L 380 200" stroke="#eab308" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+                        <text x="530" y="32" fill="#eab308" font-size="11" font-weight="700" text-anchor="middle">0.5" Sand Pad (Stops Paver Wobble)</text>
+
+                        <path d="M 680 45 L 635 140" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+                        <text x="680" y="32" fill="#ef4444" font-size="11" font-weight="700" text-anchor="middle">Red Clay Border Bricks</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Standard Poodle & Dog-Proofing Rules -->
+        <section id="dog-safety" class="scroll-mt-20">
+            <div class="bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border border-amber-300 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-2xl font-bold shadow-md shrink-0">
+                        <i class="fa-solid fa-dog"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-black text-slate-900">Standard Poodle Physics & Dog Safety Rules</h3>
+                        <p class="text-xs sm:text-sm text-slate-600">A 50+ lb poodle running at 25 mph creates explosive lateral forces on garden paths. Here is how we fix it.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-5 rounded-2xl border border-amber-200 shadow-sm space-y-2">
+                        <div class="text-amber-700 font-extrabold text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-circle-exclamation text-amber-500"></i> The "Ball-Bearing" Trap
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Unconfined pea gravel rolls under fast paws like marbles. The honeycomb geocell grid traps pebbles into rigid hex-cells, transferring dog weight sideways so paws get 100% firm traction.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-amber-200 shadow-sm space-y-2">
+                        <div class="text-amber-700 font-extrabold text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation text-red-500"></i> Claw Catcher Edge Trip
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            If stepping pavers sit 0.5 inches higher than surrounding gravel, sprinting dogs can catch dewclaws or trip at high speed. Sand pads allow setting pavers 100% flush with gravel.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-amber-200 shadow-sm space-y-2">
+                        <div class="text-amber-700 font-extrabold text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-paw text-brand-600"></i> Paw Pad Safety & Non-Toxic Binder
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Only use 3/8" smooth washed river pebbles. Never use crushed granite (cuts paw pads). The polyurethane binder spray is non-toxic and pet-safe once dried (24 hr cure).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Detailed Step-by-Step Execution Guide with Custom SVGs -->
+        <section id="steps" class="scroll-mt-20 space-y-12">
+            <div class="border-b border-slate-200 pb-4">
+                <h3 class="text-2xl font-black text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-list-ol text-brand-600"></i> Master 6-Step Execution Blueprint
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600">Detailed instructions accompanied by custom visual diagrams for every build step.</p>
+            </div>
+
+            <!-- STEP 1 -->
+            <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition step-card">
+                <div class="p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center justify-between flex-wrap gap-3 border-b border-slate-100 pb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-2xl bg-brand-600 text-white font-black text-lg flex items-center justify-center shadow-md step-icon transition">1</span>
+                            <h4 class="text-xl font-extrabold text-slate-900">Step 1: Boundary Layout & Ground Scalping</h4>
+                        </div>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold border border-slate-200">
+                            <i class="fa-regular fa-clock text-brand-600 mr-1"></i> 2–3 Hours
+                        </span>
+                    </div>
+
+                    <!-- SVG Visual Diagram Step 1 -->
+                    <div class="bg-slate-900 rounded-2xl p-4 overflow-hidden">
+                        <svg viewBox="0 0 600 180" class="w-full h-auto font-sans" aria-label="Step 1 Visual Diagram">
+                            <rect width="600" height="180" fill="#0f172a"/>
+                            <!-- Grass lawn -->
+                            <rect x="20" y="20" width="560" height="140" fill="#1e293b" rx="8"/>
+                            <path d="M 20 90 L 580 90" stroke="#f59e0b" stroke-width="2" stroke-dasharray="8,4"/>
+                            <!-- Spray paint border -->
+                            <rect x="100" y="40" width="400" height="100" fill="none" stroke="#22c55e" stroke-width="3" stroke-dasharray="4,4"/>
+                            <!-- Trimmer & Scalped path -->
+                            <rect x="105" y="45" width="390" height="90" fill="#334155" opacity="0.8"/>
+                            <text x="300" y="85" fill="#f8fafc" font-size="13" font-weight="800" text-anchor="middle">Scalped Grass to Bare Soil (No Trenching)</text>
+                            <text x="300" y="105" fill="#94a3b8" font-size="11" text-anchor="middle">Taut String Line & Marking Spray Outer Bounds</text>
+                        </svg>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        <p class="font-medium">
+                            Drive wooden stakes into the ground at both ends of your 150-foot run. Tie a string line tautly between them to define your 3-foot width. Spray marking paint along the string lines.
+                        </p>
+                        <ul class="list-disc pl-5 space-y-1.5 font-normal text-slate-600">
+                            <li>Use a string trimmer to scalp grass down to bare soil along the entire 450 sq ft footprint.</li>
+                            <li>Rake away all severed grass clippings, twigs, or loose rocks so the base is clean.</li>
+                            <li>Smooth out minor high spots or deep divots with a flat shovel—no deep digging required.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Badges Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-2">
+                        <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+                            <strong class="font-bold block text-emerald-700 mb-0.5"><i class="fa-solid fa-lightbulb"></i> Pro Tip</strong>
+                            Mow lawn on lowest setting first to make string trimming much faster.
+                        </div>
+                        <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-900">
+                            <strong class="font-bold block text-amber-700 mb-0.5"><i class="fa-solid fa-dog"></i> Dog Safety Note</strong>
+                            Ensure no sharp roots or metal debris remain that could cut dog paws.
+                        </div>
+                        <div class="p-3 rounded-xl bg-red-50 border border-red-200 text-red-900">
+                            <strong class="font-bold block text-red-700 mb-0.5"><i class="fa-solid fa-triangle-exclamation"></i> Newbie Mistake</strong>
+                            Don't dig a 4-inch deep trench! We are building on top of scalped ground.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition step-card">
+                <div class="p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center justify-between flex-wrap gap-3 border-b border-slate-100 pb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-2xl bg-brand-600 text-white font-black text-lg flex items-center justify-center shadow-md step-icon transition">2</span>
+                            <h4 class="text-xl font-extrabold text-slate-900">Step 2: Geotextile Fabric Laying & Pinning</h4>
+                        </div>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold border border-slate-200">
+                            <i class="fa-regular fa-clock text-brand-600 mr-1"></i> 1–2 Hours
+                        </span>
+                    </div>
+
+                    <!-- SVG Visual Diagram Step 2 -->
+                    <div class="bg-slate-900 rounded-2xl p-4 overflow-hidden">
+                        <svg viewBox="0 0 600 180" class="w-full h-auto font-sans" aria-label="Step 2 Visual Diagram">
+                            <rect width="600" height="180" fill="#0f172a"/>
+                            <rect x="20" y="20" width="560" height="140" fill="#1e293b" rx="8"/>
+                            <!-- Rolled Fabric -->
+                            <rect x="50" y="35" width="500" height="110" fill="#0284c7" opacity="0.8" rx="4"/>
+                            <text x="300" y="80" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">Non-Woven Geotextile Weed Barrier Roll</text>
+                            <!-- Staples -->
+                            <circle cx="80" cy="50" r="5" fill="#f8fafc"/><circle cx="200" cy="50" r="5" fill="#f8fafc"/><circle cx="320" cy="50" r="5" fill="#f8fafc"/><circle cx="440" cy="50" r="5" fill="#f8fafc"/>
+                            <circle cx="80" cy="130" r="5" fill="#f8fafc"/><circle cx="200" cy="130" r="5" fill="#f8fafc"/><circle cx="320" cy="130" r="5" fill="#f8fafc"/><circle cx="440" cy="130" r="5" fill="#f8fafc"/>
+                            <text x="300" y="110" fill="#bae6fd" font-size="11" text-anchor="middle">6" Steel Landscape Pins Hammered Every 2–3 Feet</text>
+                        </svg>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        <p class="font-medium">
+                            Unroll commercial non-woven fabric over the scalped path. Ensure fabric extends 2–3 inches wider than your intended path boundary on both sides.
+                        </p>
+                        <ul class="list-disc pl-5 space-y-1.5 font-normal text-slate-600">
+                            <li>If connecting two roll ends, overlap seams by at least 12 inches in the direction of water flow.</li>
+                            <li>Hammer 6-inch steel landscape staples every 2 to 3 feet down both edges and center line.</li>
+                            <li>Keep fabric pulled taut so there are no wrinkles or bubbles underfoot.</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-2">
+                        <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+                            <strong class="font-bold block text-emerald-700 mb-0.5"><i class="fa-solid fa-lightbulb"></i> Pro Tip</strong>
+                            Use non-woven geotextile (feels like felt). Never use cheap woven plastic weed rolls.
+                        </div>
+                        <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-900">
+                            <strong class="font-bold block text-amber-700 mb-0.5"><i class="fa-solid fa-dog"></i> Dog Safety Note</strong>
+                            Ensure staples are driven 100% flush into soil so no steel hooks stick up.
+                        </div>
+                        <div class="p-3 rounded-xl bg-red-50 border border-red-200 text-red-900">
+                            <strong class="font-bold block text-red-700 mb-0.5"><i class="fa-solid fa-triangle-exclamation"></i> Newbie Mistake</strong>
+                            Don't skip fabric! Gravel without fabric sinks into dirt within 3 months.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition step-card">
+                <div class="p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center justify-between flex-wrap gap-3 border-b border-slate-100 pb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-2xl bg-brand-600 text-white font-black text-lg flex items-center justify-center shadow-md step-icon transition">3</span>
+                            <h4 class="text-xl font-extrabold text-slate-900">Step 3: Rigid L-Edging & Red Brick Borders</h4>
+                        </div>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold border border-slate-200">
+                            <i class="fa-regular fa-clock text-brand-600 mr-1"></i> 3–4 Hours
+                        </span>
+                    </div>
+
+                    <!-- SVG Visual Diagram Step 3 -->
+                    <div class="bg-slate-900 rounded-2xl p-4 overflow-hidden">
+                        <svg viewBox="0 0 600 180" class="w-full h-auto font-sans" aria-label="Step 3 Visual Diagram">
+                            <rect width="600" height="180" fill="#0f172a"/>
+                            <rect x="20" y="20" width="560" height="140" fill="#1e293b" rx="8"/>
+                            <!-- Bricks on both sides -->
+                            <rect x="40" y="35" width="520" height="25" fill="#ef4444" stroke="#b91c1c" stroke-width="2" rx="2"/>
+                            <rect x="40" y="120" width="520" height="25" fill="#ef4444" stroke="#b91c1c" stroke-width="2" rx="2"/>
+                            <!-- L Edging -->
+                            <line x1="35" y1="33" x2="565" y2="33" stroke="#f59e0b" stroke-width="4"/>
+                            <line x1="35" y1="147" x2="565" y2="147" stroke="#f59e0b" stroke-width="4"/>
+                            <text x="300" y="95" fill="#f8fafc" font-size="13" font-weight="800" text-anchor="middle">L-Edging Restraints Spiked 12" Behind Bricks</text>
+                        </svg>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        <p class="font-medium">
+                            Position L-shaped plastic paver edging along both outer margins over the fabric. Drive 10-inch steel spiral spikes through edging tabs into the ground every 12 inches.
+                        </p>
+                        <ul class="list-disc pl-5 space-y-1.5 font-normal text-slate-600">
+                            <li>Set red bricks tightly end-to-end against the interior face of the plastic edging restraint.</li>
+                            <li>The hidden L-edging prevents bricks from blowing outward when stepped on or bumped.</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-2">
+                        <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+                            <strong class="font-bold block text-emerald-700 mb-0.5"><i class="fa-solid fa-lightbulb"></i> Pro Tip</strong>
+                            Keep brick joints tightly pressed together to prevent weed growth between bricks.
+                        </div>
+                        <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-900">
+                            <strong class="font-bold block text-amber-700 mb-0.5"><i class="fa-solid fa-dog"></i> Dog Safety Note</strong>
+                            Double-spike edging every 12" (instead of standard 18") for dog sprint resistance.
+                        </div>
+                        <div class="p-3 rounded-xl bg-red-50 border border-red-200 text-red-900">
+                            <strong class="font-bold block text-red-700 mb-0.5"><i class="fa-solid fa-triangle-exclamation"></i> Newbie Mistake</strong>
+                            Don't set bricks on bare dirt without edging behind them—they will spread outward!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition step-card">
+                <div class="p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center justify-between flex-wrap gap-3 border-b border-slate-100 pb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-2xl bg-brand-600 text-white font-black text-lg flex items-center justify-center shadow-md step-icon transition">4</span>
+                            <h4 class="text-xl font-extrabold text-slate-900">Step 4: Geocell Honeycomb Grid Installation</h4>
+                        </div>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold border border-slate-200">
+                            <i class="fa-regular fa-clock text-brand-600 mr-1"></i> 2–3 Hours
+                        </span>
+                    </div>
+
+                    <!-- SVG Visual Diagram Step 4 -->
+                    <div class="bg-slate-900 rounded-2xl p-4 overflow-hidden">
+                        <svg viewBox="0 0 600 180" class="w-full h-auto font-sans" aria-label="Step 4 Visual Diagram">
+                            <rect width="600" height="180" fill="#0f172a"/>
+                            <rect x="20" y="20" width="560" height="140" fill="#1e293b" rx="8"/>
+                            <!-- Honeycomb grid pattern -->
+                            <path d="M 60 45 L 540 45 M 60 75 L 540 75 M 60 105 L 540 105 M 60 135 L 540 135" stroke="#22c55e" stroke-width="2" stroke-dasharray="8,4"/>
+                            <path d="M 100 35 L 100 145 M 200 35 L 200 145 M 300 35 L 300 145 M 400 35 L 400 145 M 500 35 L 500 145" stroke="#22c55e" stroke-width="2" stroke-dasharray="8,4"/>
+                            <text x="300" y="95" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">2" Cellular Honeycomb Grid Expanded Between Bricks</text>
+                        </svg>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        <p class="font-medium">
+                            Unfold and stretch the 2-inch HDPE geocell grid panels along the center path area between brick borders.
+                        </p>
+                        <ul class="list-disc pl-5 space-y-1.5 font-normal text-slate-600">
+                            <li>Clip grid panel sections together using included connector keys or heavy zip ties.</li>
+                            <li>Anchor the grid edges into soil using J-hook steel staples so grid stays expanded tautly.</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-2">
+                        <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+                            <strong class="font-bold block text-emerald-700 mb-0.5"><i class="fa-solid fa-lightbulb"></i> Pro Tip</strong>
+                            Trim geocell grid edges with heavy utility scissors to fit snug against bricks.
+                        </div>
+                        <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-900">
+                            <strong class="font-bold block text-amber-700 mb-0.5"><i class="fa-solid fa-dog"></i> Dog Safety Note</strong>
+                            This grid is the #1 key to stopping your poodle from kicking gravel into the lawn!
+                        </div>
+                        <div class="p-3 rounded-xl bg-red-50 border border-red-200 text-red-900">
+                            <strong class="font-bold block text-red-700 mb-0.5"><i class="fa-solid fa-triangle-exclamation"></i> Newbie Mistake</strong>
+                            Don't leave grid cells stretched unevenly—stretch fully for maximum strength.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 5 -->
+            <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition step-card">
+                <div class="p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center justify-between flex-wrap gap-3 border-b border-slate-100 pb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-2xl bg-brand-600 text-white font-black text-lg flex items-center justify-center shadow-md step-icon transition">5</span>
+                            <h4 class="text-xl font-extrabold text-slate-900">Step 5: Sand Pads & Flush Center Paver Placement</h4>
+                        </div>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold border border-slate-200">
+                            <i class="fa-regular fa-clock text-brand-600 mr-1"></i> 3–4 Hours
+                        </span>
+                    </div>
+
+                    <!-- SVG Visual Diagram Step 5 -->
+                    <div class="bg-slate-900 rounded-2xl p-4 overflow-hidden">
+                        <svg viewBox="0 0 600 180" class="w-full h-auto font-sans" aria-label="Step 5 Visual Diagram">
+                            <rect width="600" height="180" fill="#0f172a"/>
+                            <rect x="20" y="20" width="560" height="140" fill="#1e293b" rx="8"/>
+                            <!-- Pavers spaced -->
+                            <rect x="80" y="50" width="80" height="80" fill="#64748b" stroke="#f8fafc" stroke-width="2" rx="4"/>
+                            <rect x="260" y="50" width="80" height="80" fill="#64748b" stroke="#f8fafc" stroke-width="2" rx="4"/>
+                            <rect x="440" y="50" width="80" height="80" fill="#64748b" stroke="#f8fafc" stroke-width="2" rx="4"/>
+                            <text x="300" y="152" fill="#38bdf8" font-size="11" font-weight="700" text-anchor="middle">24" Center-to-Center Spacing • 0.5" Sand Bed Under Each Paver</text>
+                        </svg>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        <p class="font-medium">
+                            Measure and mark center points every 24 inches along the pathway length for your stepping stones.
+                        </p>
+                        <ul class="list-disc pl-5 space-y-1.5 font-normal text-slate-600">
+                            <li>Cut out the geocell grid cells at each paver spot using utility shears.</li>
+                            <li>Place a 0.5-inch pad of coarse leveling sand on the fabric inside each cut slot.</li>
+                            <li>Set each concrete paver, press firmly, and verify it is level in both directions using a torpedo level.</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-2">
+                        <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+                            <strong class="font-bold block text-emerald-700 mb-0.5"><i class="fa-solid fa-lightbulb"></i> Pro Tip</strong>
+                            24" center-to-center spacing creates a natural walking stride for adults.
+                        </div>
+                        <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-900">
+                            <strong class="font-bold block text-amber-700 mb-0.5"><i class="fa-solid fa-dog"></i> Dog Safety Note</strong>
+                            Pavers MUST sit 100% FLUSH with gravel. Zero lip = zero tripping for poodles!
+                        </div>
+                        <div class="p-3 rounded-xl bg-red-50 border border-red-200 text-red-900">
+                            <strong class="font-bold block text-red-700 mb-0.5"><i class="fa-solid fa-triangle-exclamation"></i> Newbie Mistake</strong>
+                            Don't set pavers directly on gravel without sand—they will wobble like see-saws!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 6 -->
+            <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition step-card">
+                <div class="p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center justify-between flex-wrap gap-3 border-b border-slate-100 pb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-2xl bg-brand-600 text-white font-black text-lg flex items-center justify-center shadow-md step-icon transition">6</span>
+                            <h4 class="text-xl font-extrabold text-slate-900">Step 6: Pea Gravel Infill & Pet-Safe Glue Spraying</h4>
+                        </div>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold border border-slate-200">
+                            <i class="fa-regular fa-clock text-brand-600 mr-1"></i> 2–3 Hours + Cure
+                        </span>
+                    </div>
+
+                    <!-- SVG Visual Diagram Step 6 -->
+                    <div class="bg-slate-900 rounded-2xl p-4 overflow-hidden">
+                        <svg viewBox="0 0 600 180" class="w-full h-auto font-sans" aria-label="Step 6 Visual Diagram">
+                            <rect width="600" height="180" fill="#0f172a"/>
+                            <rect x="20" y="20" width="560" height="140" fill="#1e293b" rx="8"/>
+                            <!-- Filled gravel -->
+                            <rect x="40" y="35" width="520" height="110" fill="#94a3b8" opacity="0.6" rx="4"/>
+                            <!-- Paver slots filled around -->
+                            <rect x="260" y="50" width="80" height="80" fill="#64748b" stroke="#ffffff" stroke-width="2" rx="4"/>
+                            <text x="300" y="95" fill="#10b981" font-size="13" font-weight="800" text-anchor="middle">3/8" Pea Gravel Filled & Sprayed with Pet-Safe Binder</text>
+                        </svg>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        <p class="font-medium">
+                            Pour 3/8-inch smooth washed river pea gravel into grid cells and around pavers. Rake gravel smooth until flush with grid cell tops.
+                        </p>
+                        <ul class="list-disc pl-5 space-y-1.5 font-normal text-slate-600">
+                            <li>Hose down gravel to rinse rock dust and let completely dry in sun for 24 hours.</li>
+                            <li>Spray 2 coats of pet-safe clear polyurethane gravel glue using a garden pump sprayer.</li>
+                            <li>Allow 24–48 hours full drying time before letting your poodle onto the path.</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-2">
+                        <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+                            <strong class="font-bold block text-emerald-700 mb-0.5"><i class="fa-solid fa-lightbulb"></i> Pro Tip</strong>
+                            Spray glue on a sunny, dry morning for optimal binder curing.
+                        </div>
+                        <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-900">
+                            <strong class="font-bold block text-amber-700 mb-0.5"><i class="fa-solid fa-dog"></i> Dog Safety Note</strong>
+                            The binder dries 100% non-toxic and pet-safe for paws.
+                        </div>
+                        <div class="p-3 rounded-xl bg-red-50 border border-red-200 text-red-900">
+                            <strong class="font-bold block text-red-700 mb-0.5"><i class="fa-solid fa-triangle-exclamation"></i> Newbie Mistake</strong>
+                            Don't overfill gravel more than 1/4" above cells—excess loose stone rolls!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SECTION 5: Interactive Tool & Task Progress Tracker -->
+        <section id="tracker" class="scroll-mt-20 bg-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-2xl space-y-8">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+                <div>
+                    <h3 class="text-2xl font-black flex items-center gap-3">
+                        <i class="fa-solid fa-list-check text-brand-400"></i> Interactive Field Progress Tracker
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-400 mt-1">Check off items on your phone in the backyard. Your progress auto-saves!</p>
+                </div>
+                <div class="text-right flex items-center gap-4">
+                    <div>
+                        <div class="text-3xl font-black text-brand-400" id="progressPercent">0%</div>
+                        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Completed</div>
+                    </div>
+                    <button onclick="resetTracker()" class="no-print p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white text-xs font-bold transition border border-slate-700" title="Reset Tracker">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="w-full bg-slate-800 h-3.5 rounded-full overflow-hidden border border-slate-700/60 p-0.5">
+                <div id="progressBar" class="bg-gradient-to-r from-brand-500 to-emerald-400 h-full w-0 rounded-full transition-all duration-500"></div>
+            </div>
+
+            <!-- Tools Needed Checklist -->
+            <div class="space-y-3">
+                <h4 class="text-xs font-extrabold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                    <i class="fa-solid fa-toolbox text-amber-400"></i> Phase 0: Required Tools Checklist
+                </h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-xs font-semibold text-slate-300">
+                    <label class="flex items-center gap-2.5 bg-slate-800/80 p-3 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>String Line & Stakes</span>
+                    </label>
+                    <label class="flex items-center gap-2.5 bg-slate-800/80 p-3 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>Marking Spray Paint</span>
+                    </label>
+                    <label class="flex items-center gap-2.5 bg-slate-800/80 p-3 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>String Trimmer / Scalper</span>
+                    </label>
+                    <label class="flex items-center gap-2.5 bg-slate-800/80 p-3 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>Heavy Rubber Mallet</span>
+                    </label>
+                    <label class="flex items-center gap-2.5 bg-slate-800/80 p-3 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>Torpedo Level</span>
+                    </label>
+                    <label class="flex items-center gap-2.5 bg-slate-800/80 p-3 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>Metal Bow Rake</span>
+                    </label>
+                    <label class="flex items-center gap-2.5 bg-slate-800/80 p-3 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>Garden Pump Sprayer</span>
+                    </label>
+                    <label class="flex items-center gap-2.5 bg-slate-800/80 p-3 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>Utility Knife / Shears</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Execution Steps Checklist -->
+            <div class="space-y-3 pt-2">
+                <h4 class="text-xs font-extrabold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                    <i class="fa-solid fa-person-digging text-brand-400"></i> Phase 1–6: Step-by-Step Execution Tasks
+                </h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-300">
+                    <label class="flex items-center gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>Step 1: Stake 150ft string lines & scalp grass to soil</span>
+                    </label>
+                    <label class="flex items-center gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>Step 2: Unroll non-woven geotextile & pin with staples</span>
+                    </label>
+                    <label class="flex items-center gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>Step 3: Spike L-edging restraints every 12 inches</span>
+                    </label>
+                    <label class="flex items-center gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>Step 3: Lay red clay border bricks tight against L-edging</span>
+                    </label>
+                    <label class="flex items-center gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>Step 4: Expand honeycomb geocell grid between bricks</span>
+                    </label>
+                    <label class="flex items-center gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>Step 5: Cut out cells & level pavers on sand pads (100% flush)</span>
+                    </label>
+                    <label class="flex items-center gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>Step 6: Fill 3/8" smooth pea gravel & rake level</span>
+                    </label>
+                    <label class="flex items-center gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                        <input type="checkbox" class="task-check w-4 h-4 rounded text-brand-600 focus:ring-0">
+                        <span>Step 6: Spray pet-safe gravel binder glue & cure 24 hours</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Share Guide Modal -->
+    <div id="shareModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 space-y-6 shadow-2xl relative">
+            <button onclick="closeShareModal()" class="absolute right-5 top-5 text-slate-400 hover:text-slate-600 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900">Share This Guide With Your Wife</h3>
+                    <p class="text-xs text-slate-500">Fastest ways to send a live browser link</p>
+                </div>
+            </div>
+
+            <div class="space-y-4 text-xs text-slate-600">
+                <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+                    <strong class="font-bold text-slate-900 block"><i class="fa-solid fa-bolt text-amber-500"></i> Option 1: Netlify Drop (10 Seconds)</strong>
+                    <p>Go to <span class="font-mono text-brand-700">app.netlify.com/drop</span>, drop this HTML file into the browser, and copy the instant live URL!</p>
+                </div>
+                <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+                    <strong class="font-bold text-slate-900 block"><i class="fa-solid fa-feather text-blue-500"></i> Option 2: Tiiny.host (1 Click)</strong>
+                    <p>Upload this HTML file to <span class="font-mono text-blue-700">tiiny.host</span> for a free instant web link to send over SMS/WhatsApp.</p>
+                </div>
+            </div>
+
+            <button onclick="copyCurrentURL()" id="copyUrlBtn" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm">
+                <i class="fa-regular fa-copy"></i>
+                <span>Copy Current Browser Link</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Customize Costs Modal -->
+    <div id="costModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 space-y-6 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeCostModal()" class="absolute right-5 top-5 text-slate-400 hover:text-slate-600 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-sliders"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900">Customize Unit Material Costs</h3>
+                    <p class="text-xs text-slate-500">Update rates based on your local Big Box stores (Home Depot/Lowe's)</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700">
+                <div>
+                    <label class="block mb-1">Brick ($ / brick)</label>
+                    <input type="number" id="rateInputBricks" value="0.85" step="0.05" class="w-full p-2 border border-slate-300 rounded-lg">
+                </div>
+                <div>
+                    <label class="block mb-1">Paver ($ / stone)</label>
+                    <input type="number" id="rateInputPavers" value="4.50" step="0.25" class="w-full p-2 border border-slate-300 rounded-lg">
+                </div>
+                <div>
+                    <label class="block mb-1">Gravel ($ / 0.5 cu ft bag)</label>
+                    <input type="number" id="rateInputGravel" value="4.00" step="0.25" class="w-full p-2 border border-slate-300 rounded-lg">
+                </div>
+                <div>
+                    <label class="block mb-1">Geotextile Roll ($ / roll)</label>
+                    <input type="number" id="rateInputFabric" value="65.00" step="5" class="w-full p-2 border border-slate-300 rounded-lg">
+                </div>
+                <div>
+                    <label class="block mb-1">Geocell Grid ($ / sq ft)</label>
+                    <input type="number" id="rateInputGrid" value="1.20" step="0.10" class="w-full p-2 border border-slate-300 rounded-lg">
+                </div>
+                <div>
+                    <label class="block mb-1">L-Edging ($ / 10ft strip)</label>
+                    <input type="number" id="rateInputEdging" value="12.00" step="1" class="w-full p-2 border border-slate-300 rounded-lg">
+                </div>
+                <div>
+                    <label class="block mb-1">Spikes ($ / spike)</label>
+                    <input type="number" id="rateInputSpikes" value="0.65" step="0.05" class="w-full p-2 border border-slate-300 rounded-lg">
+                </div>
+                <div>
+                    <label class="block mb-1">Leveling Sand ($ / bag)</label>
+                    <input type="number" id="rateInputSand" value="5.00" step="0.5" class="w-full p-2 border border-slate-300 rounded-lg">
+                </div>
+                <div class="sm:col-span-2">
+                    <label class="block mb-1">Gravel Glue ($ / gallon)</label>
+                    <input type="number" id="rateInputGlue" value="35.00" step="5" class="w-full p-2 border border-slate-300 rounded-lg">
+                </div>
+            </div>
+
+            <button onclick="saveRatesAndRecalculate()" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs transition shadow-sm">
+                Save Rates & Recalculate Totals
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Default Unit Rates
+        let rates = {
+            brick: 0.85,
+            paver: 4.50,
+            gravelBag: 4.00,
+            fabricRoll: 65.00,
+            gridSqFt: 1.20,
+            edgingStrip: 12.00,
+            spike: 0.65,
+            sandBag: 5.00,
+            glueGallon: 35.00
+        };
+
+        // Format Currency Helper
+        function fmt(num) {
+            return '$' + num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        // Calculation Function
+        function recalculateAll() {
+            const length = parseFloat(document.getElementById('calcLength').value) || 0;
+            const width = parseFloat(document.getElementById('calcWidth').value) || 0;
+            const spacing = parseFloat(document.getElementById('calcSpacing').value) || 24;
+
+            const totalSqFt = length * width;
+            
+            // 1. Red Bricks (8 inches long each = 1.5 bricks per linear ft per side * 2 sides * 1.05 waste)
+            const linearFeet = length * 2;
+            const bricks = Math.ceil(linearFeet * 1.5 * 1.05);
+            const costBricks = bricks * rates.brick;
+
+            // 2. Stepping Pavers
+            const pavers = Math.floor((length * 12) / spacing);
+            const costPavers = pavers * rates.paver;
+
+            // 3. Pea Gravel (1.5" depth across grid area)
+            // Width taken by bricks = 8" total (4" each side) = 0.667 ft
+            const innerWidth = Math.max(0, width - 0.667);
+            const gravelArea = length * innerWidth;
+            const gravelCuFt = gravelArea * (1.5 / 12);
+            const gravelCuYds = (gravelCuFt / 27).toFixed(1);
+            const gravelBags = Math.ceil(gravelCuFt / 0.5);
+            const costGravel = gravelBags * rates.gravelBag;
+
+            // 4. Geotextile Fabric (rolls of 600 sq ft)
+            const fabricSqFt = length * (width + 0.5); // extra for overlap
+            const fabricRolls = Math.ceil(fabricSqFt / 600);
+            const costFabric = fabricRolls * rates.fabricRoll;
+
+            // 5. Geocell Grid (inner width * length)
+            const gridSqFt = Math.ceil(gravelArea);
+            const costGrid = gridSqFt * rates.gridSqFt;
+
+            // 6. L-Edging & Spikes (300 linear feet of edging = 30 pieces at 10ft)
+            const edgingPieces = Math.ceil((length * 2) / 10);
+            const spikes = Math.ceil(length * 2); // double spiked every 12 inches
+            const costEdging = (edgingPieces * rates.edgingStrip) + (spikes * rates.spike);
+
+            // 7. Leveling Sand (0.5" under pavers = ~0.074 cu ft sand per paver)
+            const sandCuFt = pavers * 0.074;
+            const sandBags = Math.ceil(sandCuFt / 0.5);
+            const costSand = sandBags * rates.sandBag;
+
+            // 8. Gravel Glue (1 gallon per ~175 sq ft)
+            const glueGallons = Math.ceil(gravelArea / 175);
+            const costGlue = glueGallons * rates.glueGallon;
+
+            // Total Cost
+            const totalCost = costBricks + costPavers + costGravel + costFabric + costGrid + costEdging + costSand + costGlue;
+
+            // Update DOM Elements
+            document.getElementById('resBricks').textContent = `${bricks} Bricks`;
+            document.getElementById('rateBricks').textContent = `${fmt(rates.brick)} / brick`;
+            document.getElementById('costBricks').textContent = fmt(costBricks);
+
+            document.getElementById('resPavers').textContent = `${pavers} Pavers`;
+            document.getElementById('ratePavers').textContent = `${fmt(rates.paver)} / paver`;
+            document.getElementById('costPavers').textContent = fmt(costPavers);
+
+            document.getElementById('resGravel').textContent = `${gravelCuYds} Cu Yds (~${gravelBags} bags)`;
+            document.getElementById('rateGravel').textContent = `${fmt(rates.gravelBag)} / 0.5cu ft bag`;
+            document.getElementById('costGravel').textContent = fmt(costGravel);
+
+            document.getElementById('resFabric').textContent = `${fabricRolls} Roll (${Math.ceil(fabricSqFt)} sq ft)`;
+            document.getElementById('rateFabric').textContent = `${fmt(rates.fabricRoll)} / roll`;
+            document.getElementById('costFabric').textContent = fmt(costFabric);
+
+            document.getElementById('resGrid').textContent = `${gridSqFt} Sq Feet`;
+            document.getElementById('rateGrid').textContent = `${fmt(rates.gridSqFt)} / sq ft`;
+            document.getElementById('costGrid').textContent = fmt(costGrid);
+
+            document.getElementById('resEdging').textContent = `${edgingPieces} Pieces / ${spikes} Spikes`;
+            document.getElementById('rateEdging').textContent = `${fmt(rates.edgingStrip)} / strip + ${fmt(rates.spike)} / spike`;
+            document.getElementById('costEdging').textContent = fmt(costEdging);
+
+            document.getElementById('resSand').textContent = `${sandBags} Bags (50 lbs each)`;
+            document.getElementById('rateSand').textContent = `${fmt(rates.sandBag)} / bag`;
+            document.getElementById('costSand').textContent = fmt(costSand);
+
+            document.getElementById('resGlue').textContent = `${glueGallons} Gallons`;
+            document.getElementById('rateGlue').textContent = `${fmt(rates.glueGallon)} / gallon`;
+            document.getElementById('costGlue').textContent = fmt(costGlue);
+
+            document.getElementById('totalProjectCost').textContent = fmt(totalCost);
+        }
+
+        // Attach Input Event Listeners
+        document.getElementById('calcLength').addEventListener('input', recalculateAll);
+        document.getElementById('calcWidth').addEventListener('input', recalculateAll);
+        document.getElementById('calcSpacing').addEventListener('change', recalculateAll);
+
+        // Modal Functions
+        function openShareModal() {
+            document.getElementById('shareModal').classList.remove('hidden');
+        }
+        function closeShareModal() {
+            document.getElementById('shareModal').classList.add('hidden');
+        }
+        function openCostModal() {
+            document.getElementById('costModal').classList.remove('hidden');
+        }
+        function closeCostModal() {
+            document.getElementById('costModal').classList.add('hidden');
+        }
+
+        function saveRatesAndRecalculate() {
+            rates.brick = parseFloat(document.getElementById('rateInputBricks').value) || 0.85;
+            rates.paver = parseFloat(document.getElementById('rateInputPavers').value) || 4.50;
+            rates.gravelBag = parseFloat(document.getElementById('rateInputGravel').value) || 4.00;
+            rates.fabricRoll = parseFloat(document.getElementById('rateInputFabric').value) || 65.00;
+            rates.gridSqFt = parseFloat(document.getElementById('rateInputGrid').value) || 1.20;
+            rates.edgingStrip = parseFloat(document.getElementById('rateInputEdging').value) || 12.00;
+            rates.spike = parseFloat(document.getElementById('rateInputSpikes').value) || 0.65;
+            rates.sandBag = parseFloat(document.getElementById('rateInputSand').value) || 5.00;
+            rates.glueGallon = parseFloat(document.getElementById('rateInputGlue').value) || 35.00;
+
+            recalculateAll();
+            closeCostModal();
+        }
+
+        function copyCurrentURL() {
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+
+            const btn = document.getElementById('copyUrlBtn');
+            btn.innerHTML = `<i class="fa-solid fa-check"></i> <span>Link Copied to Clipboard!</span>`;
+            btn.classList.remove('bg-brand-600', 'hover:bg-brand-700');
+            btn.classList.add('bg-emerald-600');
+            setTimeout(() => {
+                btn.innerHTML = `<i class="fa-regular fa-copy"></i> <span>Copy Current Browser Link</span>`;
+                btn.classList.remove('bg-emerald-600');
+                btn.classList.add('bg-brand-600', 'hover:bg-brand-700');
+            }, 2500);
+        }
+
+        // Progress Tracker Logic with LocalStorage
+        const checkboxes = document.querySelectorAll('.task-check');
+        const progressBar = document.getElementById('progressBar');
+        const progressPercent = document.getElementById('progressPercent');
+
+        function updateProgress() {
+            const total = checkboxes.length;
+            let checked = 0;
+            const state = [];
+
+            checkboxes.forEach((cb, idx) => {
+                if (cb.checked) {
+                    checked++;
+                    state.push(idx);
+                }
+            });
+
+            const percent = Math.round((checked / total) * 100);
+            progressBar.style.width = percent + '%';
+            progressPercent.textContent = percent + '%';
+
+            // Save state
+            localStorage.setItem('pathway_guide_progress', JSON.stringify(state));
+        }
+
+        function loadProgress() {
+            const saved = localStorage.getItem('pathway_guide_progress');
+            if (saved) {
+                try {
+                    const indexes = JSON.parse(saved);
+                    checkboxes.forEach((cb, idx) => {
+                        cb.checked = indexes.includes(idx);
+                    });
+                } catch (e) {
+                    console.error(e);
+                }
+            }
+            updateProgress();
+        }
+
+        function resetTracker() {
+            checkboxes.forEach(cb => cb.checked = false);
+            localStorage.removeItem('pathway_guide_progress');
+            updateProgress();
+        }
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', updateProgress);
+        });
+
+        // Initialize on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            recalculateAll();
+            loadProgress();
+        });
+    </script>
+</body>
+</html>
